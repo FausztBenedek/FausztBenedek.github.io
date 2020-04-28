@@ -6,10 +6,24 @@ body {
     padding: 8px 0;
 }
 
-.page {
+main.page {
     width: 210mm;
-    height: 297mm;
+    height: 296mm;
     background: white;
 }
 
 
+@media print {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    main.page {
+        page-break-inside: avoid;
+        background: white;
+    }
+}
+
+@page {
+    size: A4;
+}
