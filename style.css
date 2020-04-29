@@ -4,14 +4,184 @@ body {
     justify-content: center;
     align-items: center;
     padding: 8px 0;
+    color: #202020;
+}
+section {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+p {
+    text-align: justify;
+    font-size: small;
 }
 
 main.page {
     width: 210mm;
     height: 296mm;
     background: white;
+    display: grid;
+    grid-template:
+            ". .     .    ." 70px
+            ". left right ." 1fr
+            ". .     .    ." 90px / 35px 1fr 2fr 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 100;
+}
+.left {
+    grid-area: left;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.left .info {
+    width: 93%;
 }
 
+h1 {
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    margin-block-end: 1px;
+    font-size: 2rem;
+}
+h1.last-name {
+    line-height: 1.1rem;
+    letter-spacing: 2px;
+    padding-bottom: 9px;
+    font-weight: 500;
+}
+h1.first-name {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+h2.profession {
+    letter-spacing: 3.5px;
+    font-weight: 600;
+    font-size: 0.8em;
+    color: #004684;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+h3 {
+    margin: 0;
+    margin-block-end: 1px;
+    font-weight: 100;
+}
+header.lined {
+    background-image: url(src/line.svg);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 9px;
+}
+header.lined h3, header.lined h1 {
+    width: fit-content;
+    background: white;
+    padding: 0 15px;
+}
+
+.header-icon.fas, .header-icon.far {
+    border: black 1px solid;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+.contact .info {
+    display: grid;
+    grid-template: 1fr 1fr / 15px 1fr;
+    align-self: flex-end;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    padding-top: 25px;
+}
+
+.image-border {
+    width: 180px;
+    height: 180px;
+    border: grey 2px solid;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.image img {
+    filter: grayscale(70%);
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    border-radius: 100%;
+    border: grey solid 2px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.name-and-profession {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.name-and-profession .lined {
+    margin-top: 0;
+}
+.languages .info {
+    display: flex;
+    flex-flow: column;
+    padding-top: 15px;
+}
+
+.languages .info .language-element{
+    display: grid;
+    grid-template:
+            "lang-1-imag lang-1-desc" 1fr / 60px 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.languages .info .country-flag {
+    width: 45px;
+}
+
+.languages .info .language-details {
+    display: grid;
+    grid-template:
+        "lang levl" auto
+        "type type" auto / 2fr 1fr;
+    height: 100%;
+    align-content: space-around;
+}
+.language-details .lang {
+    grid-area: lang;
+}
+.language-details .level {
+    grid-area: levl;
+    text-align: right;
+}
+.language-details .type {
+    grid-area: type;
+    font-size: small;
+}
 
 @media print {
     body {
