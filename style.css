@@ -119,7 +119,7 @@ header.lined h3, header.lined h1 {
     align-self: flex-end;
     grid-row-gap: 25px;
     grid-column-gap: 25px;
-    padding-top: 25px;
+    padding-top: 15px;
 }
 .aboutme .info {
     padding-top: 14px;
@@ -158,7 +158,6 @@ header.lined h3, header.lined h1 {
 .languages .info {
     display: flex;
     flex-flow: column;
-    padding-top: 15px;
 }
 
 .languages .info .language-element{
@@ -295,12 +294,17 @@ h3 {
     grid-area: circ;
     width: 40px;
     height: 40px;
-    border-radius: 100%;
     margin-left: auto;
     margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.skills .info ul li .circle-border img {
+    height: 100%;
+    position: absolute;
 }
 .skills .info ul li .description {
     grid-area: desc;
@@ -320,21 +324,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.skills .value-7 {
-    background: linear-gradient(270deg, #004684 50%, transparent 50%), linear-gradient(-18deg, #004684 50%, lightgray 50%)
-}
-.skills .value-8 {
-    background: linear-gradient(270deg, #004684 50%, transparent 50%), linear-gradient(18deg, #004684 50%, lightgray 50%)
-}
-
-.skills .value-9 {
-    background: linear-gradient(270deg, #004684 50%, transparent 50%), linear-gradient(54deg, #004684 50%, lightgray 50%)
-}
-
-.skills .value-10 {
-    background: #004684;
+    z-index: 1;
 }
 
 
