@@ -89,7 +89,7 @@ header.lined {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 9px;
+    margin-top: 5px;
 }
 header.lined h3, header.lined h1 {
     width: fit-content;
@@ -105,6 +105,7 @@ header.lined h3, header.lined h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 4px;
 }
 
 .image {
@@ -117,12 +118,14 @@ header.lined h3, header.lined h1 {
     display: grid;
     grid-template: 1fr 1fr / 15px 1fr;
     align-self: flex-end;
-    grid-row-gap: 25px;
-    grid-column-gap: 25px;
+    align-items: center;
+    grid-row-gap: 7px;
+    grid-column-gap: 20px;
     padding-top: 15px;
+    font-size: small;
 }
 .aboutme .info {
-    padding-top: 14px;
+    padding-top: 8px;
 }
 .image-border {
     width: 200px;
@@ -167,7 +170,7 @@ header.lined h3, header.lined h1 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .languages .info .country-flag {
