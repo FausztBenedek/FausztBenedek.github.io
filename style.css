@@ -197,13 +197,13 @@ header.lined h3, header.lined h1 {
     grid-area: type;
     font-size: small;
 }
-.exerience-element, education-element {
+.exerience-element {
     width: 100%;
     display: grid;
     grid-template:
-        "titl titl intv" auto
-        ".... orgn intv" auto
-        ".... desc desc" auto / 8px auto min-content;
+        "titl titl .... intv" auto
+        ".... orgn .... intv" auto
+        ".... desc desc desc" auto / 8px auto 10px min-content;
     align-items: center;
     grid-row-gap: 3px;
     padding-top: 10px;
