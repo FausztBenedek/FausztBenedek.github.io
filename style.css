@@ -90,6 +90,7 @@ header.lined {
     justify-content: center;
     width: 100%;
     margin-top: 5px;
+    white-space: nowrap;
 }
 header.lined h3, header.lined h1 {
     width: fit-content;
@@ -218,7 +219,14 @@ header.lined h3, header.lined h1 {
     font-size: small;
     text-align: right;
     white-space: nowrap;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
+.interval .end {
+    text-align: left;
+}
+
 .job-title {
     grid-area: titl;
     font-weight: 400;
@@ -226,6 +234,9 @@ header.lined h3, header.lined h1 {
 }
 .description {
     grid-area: desc;
+    font-size: 10px;
+}
+.description p {
     font-size: 10px;
 }
 h3 {
@@ -287,7 +298,7 @@ h3 {
 .skills .info ul li {
     display: grid;
     grid-template:
-        "titl circ" auto
+        "titl circ" min-content
         "desc desc" auto / 1fr auto;
     align-items: center;
     grid-row-gap: 5px;
