@@ -115,15 +115,15 @@ header.lined h3, header.lined h1 {
     align-items: center;
     padding-top: 0;
 }
-.contact .info {
+.contact .info, .apply .info {
     display: grid;
-    grid-template: 1fr 1fr / 15px 1fr;
+    grid-template-columns: auto 1fr;
     align-self: flex-end;
     align-items: center;
-    grid-row-gap: 7px;
     grid-column-gap: 20px;
-    padding-top: 15px;
+    padding-top: 12px;
     font-size: small;
+    grid-auto-rows: 1fr;
 }
 .aboutme .info {
     padding-top: 8px;
@@ -160,8 +160,10 @@ header.lined h3, header.lined h1 {
     margin-top: 0;
 }
 .languages .info {
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-row-gap: 5px;
+    margin-top: 12px;
 }
 
 .languages .info .language-element{
@@ -171,7 +173,6 @@ header.lined h3, header.lined h1 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 12px;
 }
 
 .languages .info .country-flag {
@@ -183,9 +184,10 @@ header.lined h3, header.lined h1 {
     display: grid;
     grid-template:
         "lang levl" auto
-        "type type" auto / 2fr 1fr;
+        "type type" auto
+        "desc desc" auto / 2fr 1fr;
     height: 100%;
-    align-content: space-around;
+    align-content: center;
 }
 .language-details .lang {
     grid-area: lang;
@@ -196,6 +198,10 @@ header.lined h3, header.lined h1 {
 }
 .language-details .type {
     grid-area: type;
+    font-size: xx-small;
+}
+.language-details .desc {
+    grid-area: desc;
     font-size: small;
 }
 .exerience-element {
@@ -322,7 +328,7 @@ h3 {
 }
 .skills .info ul li .description {
     grid-area: desc;
-    align-self: flex-start;
+    align-self: center;
 }
 .skills .info ul li .title {
     grid-area: titl;
