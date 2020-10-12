@@ -35,7 +35,7 @@ main.page {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .left .info {
     width: 93%;
@@ -46,7 +46,7 @@ main.page {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .right .info {
     width: 93%;
@@ -299,7 +299,7 @@ h3 {
     padding: 0;
     margin: 0;
     justify-content: space-around;
-    grid-row-gap: 10px;
+    grid-auto-rows: min-content;
 }
 .skills .info ul li {
     display: grid;
@@ -361,4 +361,15 @@ h3 {
 
 @page {
     size: A4;
+}
+
+
+.education .fa-graduation-cap:before,
+.languages .fa-book-open:before {
+    position: relative;
+    left: 1px;
+}
+.skills .fa-user:before {
+    position: relative;
+    left: 0.5px;
 }
