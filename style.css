@@ -352,6 +352,7 @@ h3 {
     body {
         padding: 0;
         margin: 0;
+        background: white;
     }
     main.page {
         page-break-inside: avoid;
