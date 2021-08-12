@@ -294,7 +294,7 @@ h3 {
 .skills .info ul {
     display: grid;
     list-style: none;
-    grid-template-columns: repeat(auto-fit, 180px);
+    grid-template-columns: 180px 180px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -362,6 +362,7 @@ h3 {
 
 @page {
     size: A4;
+    margin: 0;
 }
 
 
